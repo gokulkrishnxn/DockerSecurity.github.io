@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS */
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+      animation-name: move;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes move {
+      0% { left: 0; }
+      50% { left: 200px; }
+      100% { left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+
+  <script>
+    // JavaScript
+    window.onload = function() {
+      var box = document.getElementById("box");
+      box.addEventListener("click", function() {
+        box.style.animationPlayState = (box.style.animationPlayState === "paused") ? "running" : "paused";
+      });
+    };
+  </script>
+</body>
+</html>
 
